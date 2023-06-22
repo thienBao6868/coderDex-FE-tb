@@ -17,6 +17,7 @@ const styles = {
 
 export const DetailPage = () => {
 	const { pokemon, nextPokemon, previousPokemon } = useSelector((state) => state.pokemons.pokemon);
+	
 	const { id } = useParams();
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -105,7 +106,7 @@ export const DetailPage = () => {
 										<div>{pokemon?.weight || 'Unknown'}</div>
 									</Grid>
 									<Grid item xs={6}>
-										<Typography color="white">Height</Typography>
+										<Typography color="white">category</Typography>
 										<div>{pokemon?.category || 'Unknown'}</div>
 									</Grid>
 									<Grid item xs={6}>
